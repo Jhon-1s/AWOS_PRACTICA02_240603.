@@ -18,4 +18,5 @@ de ramnas en el contexto de control de versiones y desarrollo colaborativo utili
 ### Historial de Cambios
 
 |No.|Descripcion|Ponteciador|Estatus|
+|---|---|---|---|
 | 1.|Declaracion de variables|1|💻En Progreso|
