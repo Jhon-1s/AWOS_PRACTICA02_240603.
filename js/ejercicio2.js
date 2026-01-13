@@ -65,29 +65,28 @@ console.log("Test_3")
 validacionUsuarioLogeado();
 
 //3. NUMBER - Tipo de dato numerico, ya sea entero o decimal
-console.warn("3. NUMBER - Tipo de dato numerico, ya sea entero o decimal")
-/* Es importante saber que JavaScript s diferencia de otros lenguajes no difiere entre enteros y decimales
-lo que para otros lenguajes de programaion lo que un ENTERO (INT), FLOTANTE(FLOAT), DECIMAL, DOUBLE(DOUBLE) para
-el solo son numeros*/
+console.warn("3.- NUMBER (NUMÉRICOS)")
+/* Es importante saber que Java Script a diferencia de otros lenguajes no diferencia los datos de tipo númerico, lo que para otros leguajes de programación lo que un ENTERO (INT), FLOTANTE (FLOAT), DECIMAL , DOBLE (DOUBLE), para el solo son números (NUMBER)*/
+
 let userID_Owner = 225
-let priceProperty = 1250000.50
+let priceProperty = 125000.50
 let latGPS = 20.240508
-let altGPS =  -97.952881
-let longGPS = 1180
+let longGPS =-97.952881
+let altGPS = 1180
 
-console.log(`Los valores de las variables declarados para los datos de la propiedad son:\n'
-     +'ID del usuario propietario: ${(userID_Owner)}\n'
-     +'Precio de la propiedad: ${priceProperty}\n'
-     +'Latitud GPS: ${latGPS}\n'
-     +'Altitud GPS: ${altGPS}\n'
-     +'Longitud GPS: ${longGPS}');
-console.log('Los tipos de las variables declaradas para los datos de la propiedad son: \n'
-    +'ID del usuario propietario: ${typeof(userID_Owner)}\n'
-    +'Precio de la propiedad: ${typeof(priceProperty)}\n'
-    +'Latitud GPS: ${typeof(latGPS)}\n'
-    +'Altitud GPS: ${typeof(altGPS)}\n'
-    +'Longitud GPS: ${typeof(longGPS)}');
+console.log(`Los valores de las variables declaradas para los datos de la propiedad son:
+                    ID del Usuario propietario: ${userID_Owner} 
+                    Precio de la propiedad: ${priceProperty}
+                    Latitud (GPS) : ${latGPS}
+                    Longitud (GPS) : ${longGPS}
+                    Altitud (GPS) : ${altGPS}`);
 
+console.log(`Los tipos de datos de las variables declaradas para los datos de la propiedad son:
+                    ID del Usuario propietario: ${typeof(userID_Owner)} 
+                    Precio de la propiedad: ${typeof(priceProperty)}
+                    Latitud (GPS) : ${typeof(latGPS)}
+                    Longitud (GPS) : ${typeof(longGPS)}
+                    Altitud (GPS) : ${typeof(altGPS)}`);
 
 
 //4. STRING - Tipo de dato cualitativo, cadenas de texto
@@ -132,92 +131,118 @@ console.log('Descripcion modificada: ${descriptionProperty.replaceAll("A","4")}'
 
 console.warn("5.BIGINT - (Entero de Grandes precision)");
 
-/*Este tipo de dato permite representar números enteros de gran tamaño, superando los límites de los
-números que se usualmente aplicaciones cientificas avanzadas, esto para no perder precision en los valores almacenados*/
+/*Este tipo de dato permite almacenar  numeros exageradamente amplios que usualmente aplicaciones científicas avanzadas requieren , esto para no perder presición en los valores almacenados. */
 
-const numeroGrande = 1234567890123456789;
-let numeroGrande2= 98765432109876543226541651651651218651;
-let numeroGrande3= 18948946516516516516516516516516516516516516516516516;
-let numeroGrande4= 4651651651651651651651651651651651651651651651651651651651651;
+const numeroGrande = 1234567890;
+let numeroGrande2 = 12345678901234567890;
+let numeroGrande3 = 123456789012345678901234567890;
+let numeroGrande4 = 1234567890123456789012345678901234567890;
 
-console.log(`'El valor de la variable numeroGrande es: ${numeroGrande}, y es soportado por: ${typeof(numeroGrande)}'}`);
-console.log(`'El valor de la variable numeroGrande2 es: ${numeroGrande2} apesar de ser soportado por: ${typeof(numeroGrande2)'`} comienza a sufirir problemas de precision en su representacion`);
-console.log(`El valor de la variable numeroGrande3 es: ${numeroGrande3} ya no es soportado por: ${typeof(numeroGrande3)} comienza a sufirir problemas de precision en su representacion`);
-console.log(`El valor de la variable numeroGrande4 es: ${numeroGrande4} y su tipo de dato es: ${typeof(numeroGrande4)} comienza a sufirir problemas de precision en su representacion`);
+console.warn("5. BIGINT  (Entero de Gran Precisión) ")
 
-//Para solucionar este problema JavaScript introduce el tipo de dato BIGINT, para definir un valor como BigInt
-//solo es necesario agregar al final de la declaracion la letra n
+console.log(`El valor de numeroGrande es: ${numeroGrande} y es soportado por: ${typeof(numeroGrande)}`);
+console.log(`El valor de numeroGrande2 es: ${numeroGrande2} a pesar de ser  soportado por: ${typeof(numeroGrande2)} comienza a sufrir problemas de precisión`);
+console.log(`El valor de numeroGrande3 es: ${numeroGrande3} a pesar de ser  soportado por: ${typeof(numeroGrande3)} comienza a sufrir problemas de precisión`);
+console.log(`El valor de numeroGrande4 es: ${numeroGrande4} a pesar de ser  soportado por: ${typeof(numeroGrande4)} comienza a sufrir problemas de precisión`);
 
-numeroGrande2 = BigInt("98765432109876543226541651651651218651")
-numeroGrande3 = BigInt("18948946516516516516516516516516516516516516516516516");
-numeroGrande4 = BigInt("4651651651651651651651651651651651651651651651651651651651651");
+numeroGrande2 = BigInt("12345678901234567890")
+console.log(`Si declaramos la variable con BigInt el valor de numeroGrande2 es: ${numeroGrande2} con un tipo de dato: ${typeof(numeroGrande2)}`);
+numeroGrande3 = BigInt("123456789012345678901234567890")
+console.log(`Si declaramos la variable con BigInt el valor de numeroGrande2 es: ${numeroGrande3} con un tipo de dato: ${typeof(numeroGrande3)}`);
+numeroGrande4 = BigInt("1234567890123456789012345678901234567890")
+console.log(`Si declaramos la variable con BigInt el valor de numeroGrande2 es: ${numeroGrande4} con un tipo de dato: ${typeof(numeroGrande4)}`);
 
-console.log(`El valor de la variable numeroGrande2 es: ${numeroGrande2} y es soportado por: ${typeof(numeroGrande2)}`);
-console.log(`El valor de la variable numeroGrande3 es: ${numeroGrande3} y es soportado por: ${typeof(numeroGrande3)}`);
-console.log(`El valor de la variable numeroGrande4 es: ${numeroGrande4} y es soportado por: ${typeof(numeroGrande4)}`);
+// 6. SYMBOL (Símbolo)
 
-//6. SYMBOL - Tipo de dato unico e inmutable
-console.warn("6. SYMBOL - (Simbolos)");
+/* Es un tipo de dato que ademas de tener un tipo, un valor , asocia la ubicación del espació en memoria, por lo que todos los valores asignados a una variable de este tipo siempre serán ÚNICOS.*/
 
-/* Este tipo de dato es utilizado para crear identificadores unicos para propiedades de objetos,
-asegurando que no habra colisiones de nombres incluso si las propiedades tienen el mismo nombre descriptivo*/
+console.warn("6. SYMBOL (Símbolos)");
 
-const numero1 = 4; 
+const numero1 = 4;
 const numero2 = 4.0;
-const numero3 = "4.0";
-const numero4 = Symbol(4);
-const numero5 = Symbol(4.0);
-const numero6 = Symbol("4.0");
+const numero3 = "4";
+const numero4 = "4.0";
+const numero5 = Symbol(4);
+const numero6 = Symbol(4.0);
 const numero7 = Symbol("4");
+const numero8 = Symbol("4.0");
 
-console.log(`Valor de tipos:
-    numero1: - valor : ${numero1}, tipo: ${typeof numero1}
-    numero2: - valor : ${numero2}, tipo: ${typeof numero2}
-    numero3: - valor : ${numero3}, tipo: ${typeof numero3}
-    numero4: - valor : ${numero4.description}, tipo: ${typeof numero4}
-    numero5: - valor : ${numero5.description}, tipo: ${typeof numero5}
-    numero6: - valor : ${numero6.description}, tipo: ${typeof numero6}
-    numero7: - valor : ${numero7.description}, tipo: ${typeof numero7}
-`);
+// Valores y tipos de datos 
+console.log(`Valores y tipos: 
+    numero1 -  valor: ${numero1}, tipo: ${typeof(numero1)}
+    numero2 -  valor: ${numero2}, tipo: ${typeof(numero2)}
+    numero3 -  valor: ${numero3}, tipo: ${typeof(numero3)}
+    numero4 -  valor: ${numero4}, tipo: ${typeof(numero4)}
+    numero5 -  valor: ${numero5.description}, tipo: ${typeof(numero5)}
+    numero6 -  valor: ${numero6.description}, tipo: ${typeof(numero6)}
+    numero7 -  valor: ${numero7.description}, tipo: ${typeof(numero7)}
+    numero8 -  valor: ${numero8.description}, tipo: ${typeof(numero8)}`)
+    
+    //Pruebas comparativas
 
-if (numero === numero2){
-    console.log("numero1 y numero2 son iguales");
-}
-else if (numero1 === numero3){
-    console.log("numero1 y numero3 son iguales");
-}else{
-    console.log("numero1, numero2 y numero3 son diferentes");
-}
+    if( numero1 == numero2)
+        console.log("Las variables numero1 y numero2 son iguales en valor.")
+    else
+        console.log("Las variables numero1 y numero2 no son iguales en valor.")
 
-//7. NULL - Tipo de dato que representa la ausencia intencional de valor
-console.warn("7. NULL - (Valor nulo)");
-/* Este tipo de dato es utilizado para indicar que una variable no tiene ningun valor asignado,
-lo que es diferente a UNDEFINED que indica que una variable no ha sido inicializada.*/
+    if( numero1 == numero3)
+        console.log("Las variables numero1 y numero3 son iguales en valor.")
+    else
+        console.log("Las variables numero1 y numero3 no son iguales en valor.")
+    
+    if( numero1 === numero3)
+        console.log("Las variables numero1 y numero3 son iguales en valor y tipo de dato.")
+    else
+        console.log("Las variables numero1 y numero3 no son iguales en valor, ni en tipo de dato.")
+
+    if( numero1 == numero4)
+        console.log("Las variables numero1 y numero4 son iguales en valor.")
+    else
+        console.log("Las variables numero1 y numero4 no son iguales en valor.")
+
+    if( numero1 === numero4)
+        console.log("Las variables numero1 y numero4 son iguales en valor y tipo de dato.")
+    else
+        console.log("Las variables numero1 y numero4 no son iguales en valor, ni en tipo de dato.")
+
+    if( numero1 == numero5)
+        console.log("Las variables numero1 y numero5 son iguales en valor y tipo de dato.")
+    else
+        console.log("Las variables numero1 y numero5 no son iguales en valor, ni en tipo de dato.")
+
+    if( numero5 == numero6)
+        console.log("Las variables numero5 y numero6 son iguales en valor y tipo de dato.")
+    else
+        console.log("Las variables numero5 y numero6 no son iguales en valor, ni en tipo de dato.")
+
+    //7.  NULL (NULO)
+/*El tipo de dato nulo es similar a UNDEFINED, con la variación de que hay un consentimiento del usuario o del sistema a que esta variable intencionalmente fue iniciada con este valor*/
+
 
 var isPremiumUser;
 var isNewUser;
-var lasLogin=newDate();
-let todayDate=new Date();
+let todayDate = new Date();
+var lastLogin = todayDate;
 
+console.warn("7. NULL (Nulo)");
 console.log(`
-    El usuario: ${usuarioLogeado}
-    Fecha ultimo login: ${todayDate}
-    Es nuevo usuario: ${isNewUser}
-    Es usuario premium: ${isPremiumUser}`);
+    El usuario: ${usuarioLogeado}, tipo de dato: ${typeof(usuarioLogeado)}
+    Fecha ultimo login: ${todayDate} tipo de dato: ${typeof(todayDate)}
+    Es nuevo usuario: ${isNewUser} tipo de dato: ${typeof(isNewUser)}
+    Es usuario premium: ${isPremiumUser} tipo de dato: ${typeof(isPremiumUser)}`);
 
-//Validacion del usuario
+// Validación del usuario
 
-if(todayDate === lasLogin)
-    isNewUser = true;
-else
-    isNewUser = false;
+if(todayDate == lastLogin)
+    isNewUser=true;
+else 
+    isNewUser=false;
 
-//Como es un usuario nuevo aun nno ve, ni publica ninguna propiedad por defecto no interesa pior el momento qeue sea premium hasta que interactue con la plataforma
-
-isPremiumUser = null;
-
+// Cómo es un usuario nuevo aun no ve , ni publica ninguna propiedad por defecto no interesa por el momento que sea premium hasta que interctue con la plataforma
+isPremiumUser=null;
+console.log("Datos después de la validación del usuario: ")
 console.log(`
-    El usuario: ${usuarioLogeado}
-    Fecha ultimo login: ${todayDate}
-    Es nuevo usuario: ${isNewUser}
-    Es usuario premium: ${isPremiumUser}`);
+    El usuario: ${usuarioLogeado}, tipo de dato: ${typeof(usuarioLogeado)}
+    Fecha ultimo login: ${todayDate} tipo de dato: ${typeof(todayDate)}
+    Es nuevo usuario: ${isNewUser} tipo de dato: ${typeof(isNewUser)}
+    Es usuario premium: ${isPremiumUser} tipo de dato: ${typeof(isPremiumUser)}`);
